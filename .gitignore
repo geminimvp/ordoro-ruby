@@ -1,5 +1,10 @@
 /.bundle
+/.byebug_history
+/.config
+/.env
 /Gemfile.lock
 /html/
 /pkg/
+/spec/reports/
+/tmp/
 /vendor/cache/*.gem

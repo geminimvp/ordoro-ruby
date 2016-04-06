@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<USERNAME>:<PASSWORD>@api.ordoro.com/product/?limit=1&status=active
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache,max-age=0,must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 07 Apr 2016 15:36:28 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - gunicorn/19.3.0
+      X-Ordoro-Api-Server:
+      - i-06c41591447657213 1.40.0
+      X-Ordoro-Handled-By:
+      - ip-172-31-7-68
+      X-Ordoro-Request-Id:
+      - 59680311-7144-4905-82ef-9bb3f6ff624f
+      Content-Length:
+      - '1978'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"count": 109730, "product": [{"available_on_hand": 1, "is_kit_parent":
+        false, "weight": 0.0, "kit_components": [], "total_on_hand": 1, "cost": 0.0,
+        "id": 34989374, "sku": "17531431363", "carts": [{"inventory_changed": false,
+        "is_demo": false, "sync": true, "max_export_qty": null, "_link": "/cart/63827/",
+        "vendor_display": "Shopify", "worker_machinga": null, "vendor": "shopify",
+        "id": 63827, "extra_info": [], "audit": {"first_import": {"created": "2016-04-05T09:33:21.640175-05:00",
+        "task_id": 50119867, "quantity": 1}, "latest_export": {}, "latest_import":
+        {"created": "2016-04-05T09:33:21.640175-05:00", "task_id": 50119867, "quantity":
+        1}, "first_export": {}}, "name": "scrubshopper.myshopify.com", "variant_sku":
+        "17531431363", "original_sku": "5702813379"}], "warehouses": [{"updated":
+        "2016-04-05T09:33:21.649687-05:00", "always_dropship": false, "is_configured_for_shipping":
+        true, "created": "2016-04-05T09:33:21.649308-05:00", "out_of_stock_threshold":
+        0, "cart": null, "is_default_location": true, "low_stock_threshold": 1, "address":
+        {"city": "Fayetteville", "fax": null, "_linkaddresscreatedtaskstatus": "/new_task/status/address_created/2260993380/",
+        "name": "Acumen 3PL Warehouse", "zip": "72704", "phone": "479-455-2022", "street1":
+        "2041 N Shiloh Dr.", "company": null, "id": 2260993380, "reference_number":
+        null, "email": "info@acumenholdings.com", "state": "AR", "country": "US",
+        "cart_address_id": null, "validation": {"suggested": [], "additional_text":
+        null, "is_error": false}, "street2": ""}, "on_hand": 1, "location_in_warehouse":
+        "", "id": 39366}], "company_id": 244613, "_link": "/product/17531431363/",
+        "type": null, "category": "Gift Card", "updated": "2016-04-05T09:33:21.660194-05:00",
+        "price": 10.0, "taxable": "", "archive_date": null, "bigc_variant_migrated":
+        false, "name": "Gift Card $10.00", "customer_text": null, "suppliers": [],
+        "created": "2016-04-05T09:33:21.629830-05:00", "to_be_shipped": 0, "on_pos":
+        0}], "limit": 1, "offset": 0}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 15:36:22 GMT
+recorded_with: VCR 3.0.1
