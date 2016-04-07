@@ -7,8 +7,9 @@ module Ordoro
       include Ordoro::Helpers::SerializationHelper
       include Ordoro::Helpers::ValidationHelper
 
-      attribute :id, Integer, readonly: true
+      attribute :id, Integer
       attribute :created, DateTime, readonly: true
+      attribute :updated, DateTime, readonly: true
 
       def initialize(client, attributes={})
         super(attributes)

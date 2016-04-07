@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<USERNAME>:<PASSWORD>@api.ordoro.com/product/?limit=5
+    uri: https://<USERNAME>:<PASSWORD>@api.ordoro.com/product/?limit=1
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Apr 2016 15:40:15 GMT
+      - Thu, 07 Apr 2016 20:53:23 GMT
       Pragma:
       - no-cache
       Server:
@@ -29,9 +29,9 @@ http_interactions:
       X-Ordoro-Handled-By:
       - ip-172-31-7-68
       X-Ordoro-Request-Id:
-      - 2659fd69-5f60-451c-93cc-264990994a6b
+      - d495ac8c-e8c1-4de7-ac8e-c31ff5846bf1
       Content-Length:
-      - '9692'
+      - '1978'
       Connection:
       - keep-alive
     body:
@@ -60,101 +60,7 @@ http_interactions:
         "price": 10.0, "taxable": "", "archive_date": null, "bigc_variant_migrated":
         false, "name": "Gift Card $10.00", "customer_text": null, "suppliers": [],
         "created": "2016-04-05T09:33:21.629830-05:00", "to_be_shipped": 0, "on_pos":
-        0}, {"available_on_hand": 1, "is_kit_parent": false, "weight": 0.0, "kit_components":
-        [], "total_on_hand": 1, "cost": 0.0, "id": 34989375, "sku": "17531431491",
-        "carts": [{"inventory_changed": false, "is_demo": false, "sync": true, "max_export_qty":
-        null, "_link": "/cart/63827/", "vendor_display": "Shopify", "worker_machinga":
-        null, "vendor": "shopify", "id": 63827, "extra_info": [], "audit": {"first_import":
-        {"created": "2016-04-05T09:33:25.905362-05:00", "task_id": 50119867, "quantity":
-        1}, "latest_export": {}, "latest_import": {"created": "2016-04-05T09:33:25.905362-05:00",
-        "task_id": 50119867, "quantity": 1}, "first_export": {}}, "name": "scrubshopper.myshopify.com",
-        "variant_sku": "17531431491", "original_sku": "5702813379"}], "warehouses":
-        [{"updated": "2016-04-05T09:33:25.913368-05:00", "always_dropship": false,
-        "is_configured_for_shipping": true, "created": "2016-04-05T09:33:25.913059-05:00",
-        "out_of_stock_threshold": 0, "cart": null, "is_default_location": true, "low_stock_threshold":
-        1, "address": {"city": "Fayetteville", "fax": null, "_linkaddresscreatedtaskstatus":
-        "/new_task/status/address_created/2260993380/", "name": "Acumen 3PL Warehouse",
-        "zip": "72704", "phone": "479-455-2022", "street1": "2041 N Shiloh Dr.", "company":
-        null, "id": 2260993380, "reference_number": null, "email": "info@acumenholdings.com",
-        "state": "AR", "country": "US", "cart_address_id": null, "validation": {"suggested":
-        [], "additional_text": null, "is_error": false}, "street2": ""}, "on_hand":
-        1, "location_in_warehouse": "", "id": 39366}], "company_id": 244613, "_link":
-        "/product/17531431491/", "type": null, "category": "Gift Card", "updated":
-        "2016-04-05T09:33:25.920248-05:00", "price": 25.0, "taxable": "", "archive_date":
-        null, "bigc_variant_migrated": false, "name": "Gift Card $25.00", "customer_text":
-        null, "suppliers": [], "created": "2016-04-05T09:33:25.892597-05:00", "to_be_shipped":
-        0, "on_pos": 0}, {"available_on_hand": 1, "is_kit_parent": false, "weight":
-        0.0, "kit_components": [], "total_on_hand": 1, "cost": 0.0, "id": 34989376,
-        "sku": "17531431555", "carts": [{"inventory_changed": false, "is_demo": false,
-        "sync": true, "max_export_qty": null, "_link": "/cart/63827/", "vendor_display":
-        "Shopify", "worker_machinga": null, "vendor": "shopify", "id": 63827, "extra_info":
-        [], "audit": {"first_import": {"created": "2016-04-05T09:33:22.499404-05:00",
-        "task_id": 50119867, "quantity": 1}, "latest_export": {}, "latest_import":
-        {"created": "2016-04-05T09:33:22.499404-05:00", "task_id": 50119867, "quantity":
-        1}, "first_export": {}}, "name": "scrubshopper.myshopify.com", "variant_sku":
-        "17531431555", "original_sku": "5702813379"}], "warehouses": [{"updated":
-        "2016-04-05T09:33:22.506901-05:00", "always_dropship": false, "is_configured_for_shipping":
-        true, "created": "2016-04-05T09:33:22.506603-05:00", "out_of_stock_threshold":
-        0, "cart": null, "is_default_location": true, "low_stock_threshold": 1, "address":
-        {"city": "Fayetteville", "fax": null, "_linkaddresscreatedtaskstatus": "/new_task/status/address_created/2260993380/",
-        "name": "Acumen 3PL Warehouse", "zip": "72704", "phone": "479-455-2022", "street1":
-        "2041 N Shiloh Dr.", "company": null, "id": 2260993380, "reference_number":
-        null, "email": "info@acumenholdings.com", "state": "AR", "country": "US",
-        "cart_address_id": null, "validation": {"suggested": [], "additional_text":
-        null, "is_error": false}, "street2": ""}, "on_hand": 1, "location_in_warehouse":
-        "", "id": 39366}], "company_id": 244613, "_link": "/product/17531431555/",
-        "type": null, "category": "Gift Card", "updated": "2016-04-05T09:33:22.513526-05:00",
-        "price": 50.0, "taxable": "", "archive_date": null, "bigc_variant_migrated":
-        false, "name": "Gift Card $50.00", "customer_text": null, "suppliers": [],
-        "created": "2016-04-05T09:33:22.491334-05:00", "to_be_shipped": 0, "on_pos":
-        0}, {"available_on_hand": 1, "is_kit_parent": false, "weight": 0.0, "kit_components":
-        [], "total_on_hand": 1, "cost": 0.0, "id": 34989377, "sku": "17531431683",
-        "carts": [{"inventory_changed": false, "is_demo": false, "sync": true, "max_export_qty":
-        null, "_link": "/cart/63827/", "vendor_display": "Shopify", "worker_machinga":
-        null, "vendor": "shopify", "id": 63827, "extra_info": [], "audit": {"first_import":
-        {"created": "2016-04-05T09:33:26.901454-05:00", "task_id": 50119867, "quantity":
-        1}, "latest_export": {}, "latest_import": {"created": "2016-04-05T09:33:26.901454-05:00",
-        "task_id": 50119867, "quantity": 1}, "first_export": {}}, "name": "scrubshopper.myshopify.com",
-        "variant_sku": "17531431683", "original_sku": "5702813379"}], "warehouses":
-        [{"updated": "2016-04-05T09:33:26.912633-05:00", "always_dropship": false,
-        "is_configured_for_shipping": true, "created": "2016-04-05T09:33:26.912321-05:00",
-        "out_of_stock_threshold": 0, "cart": null, "is_default_location": true, "low_stock_threshold":
-        1, "address": {"city": "Fayetteville", "fax": null, "_linkaddresscreatedtaskstatus":
-        "/new_task/status/address_created/2260993380/", "name": "Acumen 3PL Warehouse",
-        "zip": "72704", "phone": "479-455-2022", "street1": "2041 N Shiloh Dr.", "company":
-        null, "id": 2260993380, "reference_number": null, "email": "info@acumenholdings.com",
-        "state": "AR", "country": "US", "cart_address_id": null, "validation": {"suggested":
-        [], "additional_text": null, "is_error": false}, "street2": ""}, "on_hand":
-        1, "location_in_warehouse": "", "id": 39366}], "company_id": 244613, "_link":
-        "/product/17531431683/", "type": null, "category": "Gift Card", "updated":
-        "2016-04-05T09:33:26.921410-05:00", "price": 100.0, "taxable": "", "archive_date":
-        null, "bigc_variant_migrated": false, "name": "Gift Card $100.00", "customer_text":
-        null, "suppliers": [], "created": "2016-04-05T09:33:26.884425-05:00", "to_be_shipped":
-        0, "on_pos": 0}, {"available_on_hand": 1, "is_kit_parent": false, "weight":
-        0.0, "kit_components": [], "total_on_hand": 1, "cost": 0.0, "id": 35013617,
-        "sku": "17569060035", "carts": [{"inventory_changed": false, "is_demo": false,
-        "sync": true, "max_export_qty": null, "_link": "/cart/63827/", "vendor_display":
-        "Shopify", "worker_machinga": null, "vendor": "shopify", "id": 63827, "extra_info":
-        [], "audit": {"first_import": {"created": "2016-04-05T12:59:32.800184-05:00",
-        "task_id": 50119867, "quantity": 1}, "latest_export": {}, "latest_import":
-        {"created": "2016-04-05T12:59:32.800184-05:00", "task_id": 50119867, "quantity":
-        1}, "first_export": {}}, "name": "scrubshopper.myshopify.com", "variant_sku":
-        "17569060035", "original_sku": "5714358531"}], "warehouses": [{"updated":
-        "2016-04-05T12:59:32.816118-05:00", "always_dropship": false, "is_configured_for_shipping":
-        true, "created": "2016-04-05T12:59:32.815554-05:00", "out_of_stock_threshold":
-        0, "cart": null, "is_default_location": true, "low_stock_threshold": 1, "address":
-        {"city": "Fayetteville", "fax": null, "_linkaddresscreatedtaskstatus": "/new_task/status/address_created/2260993380/",
-        "name": "Acumen 3PL Warehouse", "zip": "72704", "phone": "479-455-2022", "street1":
-        "2041 N Shiloh Dr.", "company": null, "id": 2260993380, "reference_number":
-        null, "email": "info@acumenholdings.com", "state": "AR", "country": "US",
-        "cart_address_id": null, "validation": {"suggested": [], "additional_text":
-        null, "is_error": false}, "street2": ""}, "on_hand": 1, "location_in_warehouse":
-        "", "id": 39366}], "company_id": 244613, "_link": "/product/17569060035/",
-        "type": null, "category": "", "updated": "2016-04-05T12:59:32.829776-05:00",
-        "price": 0.0, "taxable": "", "archive_date": null, "bigc_variant_migrated":
-        false, "name": "Women''s Boxer Pant - Apple Green Default Title", "customer_text":
-        null, "suppliers": [], "created": "2016-04-05T12:59:32.785138-05:00", "to_be_shipped":
-        0, "on_pos": 0}], "limit": 5, "offset": 0}'
+        0}], "limit": 1, "offset": 0}'
     http_version: 
-  recorded_at: Thu, 07 Apr 2016 15:40:09 GMT
+  recorded_at: Thu, 07 Apr 2016 20:53:17 GMT
 recorded_with: VCR 3.0.1

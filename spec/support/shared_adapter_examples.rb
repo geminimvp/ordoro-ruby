@@ -9,12 +9,12 @@ module SharedAdapterExamples
   RSpec.shared_examples "an API adapter" do
 
     describe "#where" do
-      let(:collection) { adapter.where(limit: 5) }
+      let(:collection) { adapter.where(limit: 1) }
 
       it "returns a collection of records" do
         VCR.use_cassette(plural_name) do
           expect(collection).to be_a Array
-          expect(collection.size).to eq 5
+          expect(collection.size).to eq 1
           expect(collection[0]).to be_an_instance_of(record_class)
         end
       end

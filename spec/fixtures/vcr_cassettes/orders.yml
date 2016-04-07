@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<USERNAME>:<PASSWORD>@api.ordoro.com/order/?limit=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache,max-age=0,must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 07 Apr 2016 20:55:08 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - gunicorn/19.3.0
+      X-Ordoro-Api-Server:
+      - i-05e2318b4fda943dd 1.40.0
+      X-Ordoro-Handled-By:
+      - ip-172-31-44-68
+      X-Ordoro-Request-Id:
+      - 8ff43c5b-7f76-44a3-91b3-e07a505d73fb
+      Content-Length:
+      - '3522'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"count": 1, "limit": 1, "order": [{"shipments": [], "notes_from_customer":
+        "", "shippability": "shippable", "shipping_amount": 8.0, "shipping_type":
+        "Standard Shipping", "comments": [{"date": "2016-04-07T14:34:17.766983-05:00",
+        "text": "Updated address with data: validation={u''suggested'': [{u''city'':
+        u''FAYETTEVILLE'', u''zip'': u''72701'', u''street1'': u''1 W CENTER ST'',
+        u''street2'': '''', u''is_commercial'': False, u''state'': u''AR'', u''country_code'':
+        u''US''}], u''additional_text'': u''Default Match - More information, such
+        as an apartment or suite number, may give a more specific address.'', u''is_error'':
+        False}", "user": "blake@geminimvp.com"}], "company_id": 244613, "_link": "/order/1-1001/",
+        "credit_card_issuer": "Visa", "status": "new", "updated": "2016-04-07T14:34:11.083449-05:00",
+        "billing_address": {"city": "Fayetteville", "fax": "", "_linkaddresscreatedtaskstatus":
+        "/new_task/status/address_created/2271338118/", "name": "Jim Kane", "zip":
+        "72701", "phone": "", "street1": "1 W Center St", "company": "", "_link":
+        "/address/2271338118/", "id": 2271338118, "reference_number": "", "email":
+        "fastjames@gmail.com", "state": "AR", "country": "US", "cart_address_id":
+        "", "validation": {"suggested": [], "additional_text": null, "is_error": false},
+        "street2": ""}, "tags": [], "order_id": "1-1001", "product_amount": 35.46,
+        "grand_total": 47.69, "cart": 63827, "order_date": "2016-04-07T14:08:10-05:00",
+        "cart_order_id": "2707083203", "cart_shipment_id": "", "discount_amount":
+        0.0, "tax_amount": 4.23, "created": "2016-04-07T14:34:11.020780-05:00", "lines":
+        [{"product": {"sku": "L-7489-M-BCP", "category": "Scrubs", "bigc_variant_migrated":
+        false, "archive_date": null, "updated": "2016-04-05T09:42:32.665044-05:00",
+        "name": "Men''s 5 Pocket Scrub Top - Ceil Blue Medium", "weight": 0.5379279193,
+        "customer_text": null, "price": 17.73, "created": "2016-04-05T09:42:32.640988-05:00",
+        "company_id": 244613, "_link": "/product/L-7489-M-BCP/", "total_on_hand":
+        100, "cost": 0.0, "taxable": "", "type": null, "id": 34990542, "is_kit_parent":
+        false}, "item_price": 17.73, "tax_lines": [{"amount": 2.3, "rate": 0.065,
+        "name": "AR State Tax"}, {"amount": 0.44, "rate": 0.0125, "name": "Washington
+        County Tax"}, {"amount": 0.71, "rate": 0.02, "name": "Fayetteville Municipal
+        Tax"}], "shippability": {"num_ordered": 2, "supplier_id": null, "shippability":
+        "shippable", "is_dropship": false, "num_shippable": 2, "track_inventory":
+        true, "on_hand": 100, "num_shipped": 0}, "total_price": 35.46, "selected_option":
+        "", "cart_orderitem_id": "4819923971", "manually_edited": false, "order_line_id":
+        16924489, "option_price": 0.0, "_link": "/order/1-1001/line/16924489/", "product_name":
+        "Men''s 5 Pocket Scrub Top - Ceil Blue Medium", "quantity": 2}], "cart_name":
+        "scrubshopper.myshopify.com", "shipping_address": {"city": "Fayetteville",
+        "fax": "", "_linkaddresscreatedtaskstatus": "/new_task/status/address_created/2271338117/",
+        "name": "Jim Kane", "zip": "72701", "phone": "", "street1": "1 W Center St",
+        "company": "", "_link": "/address/2271338117/", "id": 2271338117, "reference_number":
+        "", "email": "fastjames@gmail.com", "state": "AR", "country": "US", "cart_address_id":
+        "", "validation": {"suggested": [{"city": "FAYETTEVILLE", "zip": "72701",
+        "street1": "1 W CENTER ST", "street2": "", "is_commercial": false, "state":
+        "AR", "country_code": "US"}], "additional_text": "Default Match - More information,
+        such as an apartment or suite number, may give a more specific address.",
+        "is_error": false}, "street2": ""}}], "offset": 0}'
+    http_version: 
+  recorded_at: Thu, 07 Apr 2016 20:55:08 GMT
+recorded_with: VCR 3.0.1

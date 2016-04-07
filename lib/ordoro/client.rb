@@ -8,6 +8,7 @@ module Ordoro
     base_uri 'https://api.ordoro.com'
     debug_output $stderr
 
+    record :Order
     record :Product
 
     def initialize(username, password, options={})

@@ -7,7 +7,6 @@ module Ordoro
       attribute :available_on_hand, Integer
       attribute :category, String
       attribute :cost, BigDecimal
-      attribute :id, Integer
       attribute :low_stock_threshold, Integer
       attribute :name, String
       attribute :on_hand, Integer
