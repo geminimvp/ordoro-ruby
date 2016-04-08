@@ -7,8 +7,8 @@ require 'ordoro/version'
 Gem::Specification.new do |gem|
   gem.name          = "ordoro-ruby"
   gem.version       = Ordoro::VERSION
-  gem.summary       = %q{TODO: Summary}
-  gem.description   = %q{TODO: Description}
+  gem.summary       = %q{A library for accessing the Ordoro API}
+  gem.description   = %q{A library for accessing the Ordoro API.}
   gem.license       = "MIT"
   gem.authors       = ["James Kane"]
   gem.email         = "fastjames@gmail.com"
