@@ -161,7 +161,9 @@ module SharedAdapterExamples
       end
 
       context "when record already exists" do
-        let(:record) { record_class.new(client, id: 123) }
+        let(:record) {
+          record_class.new('client' => client, 'id' => 123)
+        }
         let(:record_id) { record.id}
 
         let(:path_regex) {

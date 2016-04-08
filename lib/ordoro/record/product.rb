@@ -4,7 +4,7 @@ module Ordoro
   module Record
     class Product < Base
 
-      attribute :available_on_hand, Integer
+      attribute :available_on_hand, Integer, readonly: true
       attribute :category, String
       attribute :cost, BigDecimal
       attribute :low_stock_threshold, Integer
@@ -17,7 +17,24 @@ module Ordoro
       attribute :sync, Boolean
       attribute :total_on_hand, Integer
       attribute :variant_sku, String
+      attribute :warehouses, Array[Ordoro::Record::ProductWarehouse], readonly: true
       attribute :weight, Float
+
+      def save
+        super
+        save_warehouses
+      end
+
+      # The API doesn't allow us to save warehouses in the Product
+      # PUT request, so we have to make separate calls for those.
+      # It would probably be safer to save these individually since
+      # we could introduce a race condition, but premature
+      # optimization is the root of all evil.
+      def save_warehouses
+        warehouses.each do |product_warehouse|
+          product_warehouse.save_embedded(self)
+        end
+      end
 
     end
 

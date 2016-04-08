@@ -11,17 +11,14 @@ module SharedRecordExamples
     describe "#persisted?" do
       subject { new_record.persisted? }
       context "when record has an ID" do
-        let(:new_record) { record_class.new(client, id: 123) }
+        let(:new_record) {
+          record_class.new('client' => client, 'id' => 123)
+        }
         it { should be true }
       end
 
-      context "when record has no ID" do
-        let(:new_record) { record_class.new(client, {}) }
-        it { should be false }
-      end
-
       context "when record has no params" do
-        let(:new_record) { record_class.new(client) }
+        let(:new_record) { record_class.new({'client' => client}) }
         it { should be false }
       end
     end

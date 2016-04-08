@@ -36,7 +36,7 @@ module Ordoro
       end
 
       def where(params={})
-        full_path = record_path + '/'
+        full_path = record_path
         response = request(:get, full_path, query: params)
         parsed_response = JSON.parse(response.body)
         set_pagination(parsed_response)
@@ -58,7 +58,7 @@ module Ordoro
 
       def fetch(id)
         verify_id_presence!(id)
-        full_path = record_path + '/' + id.to_s + '/'
+        full_path = record_path + id.to_s + '/'
         response = @last_response = request(:get, full_path)
         if response.code == 404
           record_not_found!(id)
@@ -85,7 +85,7 @@ module Ordoro
       end
 
       def build(attributes={})
-        model_class.new(@client, attributes)
+        model_class.new(attributes.merge({'client' => @client}))
       end
 
       def save(record)
@@ -97,7 +97,7 @@ module Ordoro
       end
 
       def instantiate_and_register_record(record_json)
-        record = model_class.new(@client, record_json)
+        record = build(record_json)
         register_record(record)
         record
       end
@@ -109,7 +109,7 @@ module Ordoro
       end
 
       def record_path
-        '/' + json_root
+        '/' + json_root + '/'
       end
 
       def plural_path
@@ -125,7 +125,7 @@ module Ordoro
       end
 
       def create_record(record)
-        request_path = "/#{json_root}/"
+        request_path = record_path
         request_params = {
           body: record.as_json,
           raise_errors: false
@@ -135,7 +135,7 @@ module Ordoro
       end
 
       def update_record(record)
-        request_path = "/#{json_root}/#{record.id.to_s}"
+        request_path = "#{record_path}#{record.id.to_s}/"
         request_params = {
           body: record.as_json,
           raise_errors: false

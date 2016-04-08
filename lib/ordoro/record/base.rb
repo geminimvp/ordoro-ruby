@@ -7,13 +7,14 @@ module Ordoro
       include Ordoro::Helpers::SerializationHelper
       include Ordoro::Helpers::ValidationHelper
 
-      attribute :id, Integer
+      attribute :id, Integer, readonly: true
       attribute :created, DateTime, readonly: true
       attribute :updated, DateTime, readonly: true
+      attribute :client, Ordoro::Client, readonly: true
 
-      def initialize(client, attributes={})
+      def initialize(attributes={})
+        @client = attributes.delete('client')
         super(attributes)
-        @client = client
       end
 
       def persisted?

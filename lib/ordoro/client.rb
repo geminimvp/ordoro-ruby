@@ -6,10 +6,12 @@ module Ordoro
     extend Helpers::RecordHelper
     include HTTParty
     base_uri 'https://api.ordoro.com'
-    debug_output $stderr
+    # TODO: put this under a flag / config var
+    # debug_output $stderr
 
     record :Order
     record :Product
+    record :ProductWarehouse
 
     def initialize(username, password, options={})
       @username = username
@@ -18,7 +20,6 @@ module Ordoro
 
     def request(verb, path, options={})
       options = default_request_options.merge(options)
-      $stderr.puts "Client#request: for #{verb} to #{path} with #{options.inspect}"
       self.class.send(verb.to_sym, path, options)
     end
 

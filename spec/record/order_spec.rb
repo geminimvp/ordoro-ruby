@@ -11,7 +11,7 @@ describe Ordoro::Record::Order do
   let(:json) {
     load_vcr_hash('orders', 'order').first
   }
-  let(:record) { record_class.new(client, json) }
+  let(:record) { record_class.new(json.merge({'client' => client})) }
 
   it "initializes an instance of the class" do
     expect(record).to be_a record_class
