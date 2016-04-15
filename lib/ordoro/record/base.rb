@@ -14,6 +14,7 @@ module Ordoro
 
       def initialize(attributes={})
         @client = attributes.delete('client')
+        self.id = attributes.delete('id_token')
         super(attributes)
       end
 

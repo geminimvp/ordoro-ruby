@@ -9,16 +9,22 @@ module Ordoro
       attribute :cost, BigDecimal
       attribute :low_stock_threshold, Integer
       attribute :name, String
-      attribute :on_hand, Integer
+      attribute :on_hand, Integer, readonly: true
       attribute :original_sku, String
       attribute :out_of_stock_threshold, Integer
       attribute :price, BigDecimal
       attribute :sku, String
+      attribute :suppliers, Array[Ordoro::Record::ProductSupplier], readonly: true
       attribute :sync, Boolean
-      attribute :total_on_hand, Integer
+      attribute :total_on_hand, Integer, readonly: true
       attribute :variant_sku, String
       attribute :warehouses, Array[Ordoro::Record::ProductWarehouse], readonly: true
       attribute :weight, Float
+
+      def initialize(attributes={})
+        self.sku = attributes.delete('id_token')
+        super(attributes)
+      end
 
       def save
         super

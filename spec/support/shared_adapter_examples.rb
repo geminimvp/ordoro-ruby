@@ -162,7 +162,7 @@ module SharedAdapterExamples
 
       context "when record already exists" do
         let(:record) {
-          record_class.new('client' => client, 'id' => 123)
+          record_class.new('client' => client, 'id_token' => 123)
         }
         let(:record_id) { record.id}
 

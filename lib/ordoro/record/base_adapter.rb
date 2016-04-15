@@ -135,13 +135,17 @@ module Ordoro
       end
 
       def update_record(record)
-        request_path = "#{record_path}#{record.id.to_s}/"
+        request_path = update_request_path(record)
         request_params = {
           body: record.as_json,
           raise_errors: false
         }
         response = request(:put, request_path, request_params)
         handle_response(record, response)
+      end
+
+      def update_request_path(record)
+        "#{record_path}#{record.id.to_s}/"
       end
 
       def handle_response(record, response)

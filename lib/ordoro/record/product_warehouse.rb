@@ -16,8 +16,13 @@ module Ordoro
       attribute :out_of_stock_threshold, Integer
 
       def save_embedded(parent)
-        parent.client.adapter_for(self.class.demodulized_name).save_embedded(self, parent)
+        parent_adapter.save_embedded(self, parent)
       end
+
+      def parent_adapter
+        parent.client.adapter_for(self.class.demodulized_name)
+      end
+
     end
   end
 end
