@@ -27,6 +27,7 @@ module Ordoro
       attribute :shipping_amount, BigDecimal
       attribute :shipping_type, String
       attribute :status, String, readonly: true
+      attribute :tag_ids, Array[Integer]
       attribute :tags, Array[Ordoro::Record::Tag]
       attribute :tax_amount, BigDecimal
       attribute :tax_lines, Array[Ordoro::Record::TaxLineItem]
