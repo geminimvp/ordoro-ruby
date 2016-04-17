@@ -76,7 +76,7 @@ module Ordoro
       end
 
       def extract_collection(json)
-        json[json_root]
+        json[json_root] || []
       end
 
       # For a single record, the JSON response is not namespaced
