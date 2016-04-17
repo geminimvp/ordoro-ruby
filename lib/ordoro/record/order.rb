@@ -32,8 +32,9 @@ module Ordoro
       attribute :tax_lines, Array[Ordoro::Record::TaxLineItem]
       attribute :total_price, BigDecimal
 
-      def id
-        order_id
+      def initialize(attributes={})
+        self.order_id = attributes.delete('id_token')
+        super(attributes)
       end
 
     end

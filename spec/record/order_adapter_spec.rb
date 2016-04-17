@@ -14,6 +14,6 @@ describe Ordoro::Record::OrderAdapter do
     expect(adapter).to be_a Ordoro::Record::OrderAdapter
   end
 
-  # it_behaves_like "an API adapter"
+  it_behaves_like "an API adapter"
 
 end

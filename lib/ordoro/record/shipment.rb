@@ -3,8 +3,7 @@ require 'ordoro/record/base'
 module Ordoro
   module Record
     class Shipment < Base
-      attribute :id, Integer
-      attribute :tags, Array[String]
+      attribute :tags, Array[Ordoro::Record::Tag]
       attribute :weight, BigDecimal
     end
   end

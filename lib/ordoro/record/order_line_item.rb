@@ -16,6 +16,14 @@ module Ordoro
       attribute :shippability, String
       attribute :tax_lines, Array[Ordoro::Record::TaxLineItem]
       attribute :total_price, BigDecimal
+
+      # The product record that arrives as part of the OrderLineItem is
+      # abbreviated, so sometimes we need the full record (e.g. with
+      # warehouse data).
+      def full_product
+        client.Product.find(product.sku)
+      end
+
     end
   end
 end

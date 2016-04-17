@@ -1,6 +1,7 @@
 require 'ordoro'
 require 'rspec'
 require 'vcr'
+require 'byebug'
 require 'support/testing_adapter'
 require 'support/shared_adapter_examples'
 require 'support/shared_record_examples'

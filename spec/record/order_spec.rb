@@ -17,6 +17,6 @@ describe Ordoro::Record::Order do
     expect(record).to be_a record_class
   end
 
-  # it_behaves_like "an API record class"
+  it_behaves_like "an API record class"
 
 end

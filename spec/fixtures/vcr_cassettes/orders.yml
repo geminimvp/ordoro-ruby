@@ -19,45 +19,148 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Apr 2016 20:55:08 GMT
+      - Sun, 17 Apr 2016 19:17:25 GMT
       Pragma:
       - no-cache
       Server:
       - gunicorn/19.3.0
       X-Ordoro-Api-Server:
-      - i-05e2318b4fda943dd 1.40.0
+      - i-0f0fa72bf1e5bfbca 1.40.0
       X-Ordoro-Handled-By:
-      - ip-172-31-44-68
+      - ip-172-31-16-249
       X-Ordoro-Request-Id:
-      - 8ff43c5b-7f76-44a3-91b3-e07a505d73fb
+      - b2c7b6db-4bde-4e89-b78a-ed36511b94fc
       Content-Length:
-      - '3522'
+      - '12190'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"count": 1, "limit": 1, "order": [{"shipments": [], "notes_from_customer":
+      string: '{"count": 35, "limit": 1, "order": [{"shipments": [{"audit_shipment":
+        {"tracking": [], "sent": []}, "notes_from_customer": "", "weight": 1.075,
+        "return_tracking": {}, "_linkshipmentcreatedtaskstatus": "/new_task/status/shipment_created/1-1001-1/",
+        "assigned_to_id": 39432, "comments": [], "_linkreturnlabelrate": "/shipment/1-1001-1/return_label/rate/",
+        "ship_to": {"city": "Fayetteville", "fax": "", "_linkaddresscreatedtaskstatus":
+        "/new_task/status/address_created/2271338117/", "name": "Jim Kane", "zip":
+        "72701", "phone": "", "street1": "1 W Center St", "company": "", "id": 2271338117,
+        "reference_number": "", "email": "fastjames@gmail.com", "state": "AR", "country":
+        "US", "cart_address_id": "", "validation": {"suggested": [{"city": "FAYETTEVILLE",
+        "zip": "72701", "street1": "1 W CENTER ST", "street2": "", "is_commercial":
+        false, "state": "AR", "country_code": "US"}], "additional_text": "Default
+        Match - More information, such as an apartment or suite number, may give a
+        more specific address.", "is_error": false}, "street2": ""}, "notify_cart_success":
+        null, "_linkgeneratelabel": "/shipment/1-1001-1/label/generate/", "requested_shipping_method":
+        "Standard Shipping", "company_id": 244613, "_link": "/shipment/1-1001-1/",
+        "cart_vendor": "shopify", "audit_label": [], "notify_cart": false, "ship_from":
+        {"city": "", "fax": "", "_linkaddresscreatedtaskstatus": "/new_task/status/address_created/2266118514/",
+        "name": null, "zip": "", "phone": "", "street1": "", "company": "Landau Uniforms,
+        Inc.", "id": 2266118514, "reference_number": "Landau, MDF, Scrubzone, Smitten,
+        Urbane", "email": "blake@scrubshopper.com", "state": "", "dropshipper_shipping_method":
+        "Standard Shipping", "country": "", "cart_address_id": null, "validation":
+        {"suggested": [], "additional_text": null, "is_error": false}, "dropshipper_id":
+        26906, "street2": ""}, "status": "deleted", "updated": "2016-04-14T10:40:13.867140-05:00",
+        "tags": [], "order_id": "1-1001", "_linklabelrate": "/shipment/1-1001-1/label/rate/",
+        "cart": 63827, "ship_date": null, "preset": {}, "exported": null, "order_date":
+        "2016-04-07T14:08:10-05:00", "_linkgeneratereturnlabel": "/shipment/1-1001-1/return_label/generate/",
+        "cart_order_id": "2707083203", "tracking": {}, "notify_cart_history": [],
+        "created": "2016-04-14T10:37:48.528733-05:00", "lines": [{"comment": "", "product":
+        {"sku": "L-7489-M-BCP", "category": "Scrubs", "bigc_variant_migrated": false,
+        "archive_date": null, "updated": "2016-04-15T11:50:27.457858-05:00", "name":
+        "Men''s 5 Pocket Scrub Top - Ceil Blue Medium", "weight": 0.5379279193, "customer_text":
+        null, "price": 17.73, "created": "2016-04-05T09:42:32.640988-05:00", "company_id":
+        244613, "_link": "/product/L-7489-M-BCP/", "total_on_hand": 100, "cost": 0.0,
+        "taxable": "", "type": null, "id": 34990542, "is_kit_parent": false}, "cart_orderitem_id":
+        "4819923971", "item_price": 17.73, "cogs": 0.0, "product_name": "Men''s 5
+        Pocket Scrub Top - Ceil Blue Medium", "order_line_id": 16924489, "selected_option":
+        "", "_link": "/shipment/1-1001-1/line/11260825/", "shipment_id": 6274626,
+        "total_price": 35.46, "ordered_quantity": 2, "id": 11260825, "quantity": 2}],
+        "shipped": true, "cart_notified_on": null, "added_by_id": 35393, "assigned_to":
+        {"city": "Fayetteville", "fax": null, "_linkaddresscreatedtaskstatus": "/new_task/status/address_created/2276493195/",
+        "name": "Landau Uniforms, Inc.", "zip": "72701", "phone": "866-824-7962",
+        "street1": "1 W Center St", "company": null, "id": 2276493195, "reference_number":
+        null, "email": "info@scrubshopper.com", "state": "AR", "country": "US", "cart_address_id":
+        null, "validation": {"suggested": [], "additional_text": null, "is_error":
+        false}, "street2": ""}, "shipment_id": "1-1001-1"}, {"audit_shipment": {"tracking":
+        [], "sent": []}, "notes_from_customer": "", "weight": 1.075, "return_tracking":
+        {}, "_linkshipmentcreatedtaskstatus": "/new_task/status/shipment_created/1-1001-2/",
+        "assigned_to_id": 39432, "comments": [], "_linkreturnlabelrate": "/shipment/1-1001-2/return_label/rate/",
+        "ship_to": {"city": "Fayetteville", "fax": "", "_linkaddresscreatedtaskstatus":
+        "/new_task/status/address_created/2271338117/", "name": "Jim Kane", "zip":
+        "72701", "phone": "", "street1": "1 W Center St", "company": "", "id": 2271338117,
+        "reference_number": "", "email": "fastjames@gmail.com", "state": "AR", "country":
+        "US", "cart_address_id": "", "validation": {"suggested": [{"city": "FAYETTEVILLE",
+        "zip": "72701", "street1": "1 W CENTER ST", "street2": "", "is_commercial":
+        false, "state": "AR", "country_code": "US"}], "additional_text": "Default
+        Match - More information, such as an apartment or suite number, may give a
+        more specific address.", "is_error": false}, "street2": ""}, "notify_cart_success":
+        null, "_linkgeneratelabel": "/shipment/1-1001-2/label/generate/", "requested_shipping_method":
+        "Standard Shipping", "company_id": 244613, "_link": "/shipment/1-1001-2/",
+        "cart_vendor": "shopify", "audit_label": [], "notify_cart": false, "ship_from":
+        {"city": "Fayetteville", "fax": null, "_linkaddresscreatedtaskstatus": "/new_task/status/address_created/2276493195/",
+        "name": "Landau Uniforms, Inc.", "zip": "72701", "phone": "866-824-7962",
+        "street1": "1 W Center St", "company": null, "id": 2276493195, "reference_number":
+        null, "email": "info@scrubshopper.com", "state": "AR", "country": "US", "cart_address_id":
+        null, "validation": {"suggested": [], "additional_text": null, "is_error":
+        false}, "street2": ""}, "status": "deleted", "updated": "2016-04-14T10:44:41.386896-05:00",
+        "tags": [], "order_id": "1-1001", "_linklabelrate": "/shipment/1-1001-2/label/rate/",
+        "cart": 63827, "ship_date": null, "preset": {}, "exported": null, "order_date":
+        "2016-04-07T14:08:10-05:00", "_linkgeneratereturnlabel": "/shipment/1-1001-2/return_label/generate/",
+        "cart_order_id": "2707083203", "tracking": {}, "notify_cart_history": [],
+        "created": "2016-04-14T10:44:25.156946-05:00", "lines": [{"comment": "", "product":
+        {"sku": "L-7489-M-BCP", "category": "Scrubs", "bigc_variant_migrated": false,
+        "archive_date": null, "updated": "2016-04-15T11:50:27.457858-05:00", "name":
+        "Men''s 5 Pocket Scrub Top - Ceil Blue Medium", "weight": 0.5379279193, "customer_text":
+        null, "price": 17.73, "created": "2016-04-05T09:42:32.640988-05:00", "company_id":
+        244613, "_link": "/product/L-7489-M-BCP/", "total_on_hand": 100, "cost": 0.0,
+        "taxable": "", "type": null, "id": 34990542, "is_kit_parent": false}, "cart_orderitem_id":
+        "4819923971", "item_price": 17.73, "cogs": 0.0, "product_name": "Men''s 5
+        Pocket Scrub Top - Ceil Blue Medium", "order_line_id": 16924489, "selected_option":
+        "", "_link": "/shipment/1-1001-2/line/11260952/", "shipment_id": 6274692,
+        "total_price": 35.46, "ordered_quantity": 2, "id": 11260952, "quantity": 2}],
+        "shipped": true, "cart_notified_on": null, "added_by_id": 35393, "assigned_to":
+        {"city": "Fayetteville", "fax": null, "_linkaddresscreatedtaskstatus": "/new_task/status/address_created/2276493195/",
+        "name": "Landau Uniforms, Inc.", "zip": "72701", "phone": "866-824-7962",
+        "street1": "1 W Center St", "company": null, "id": 2276493195, "reference_number":
+        null, "email": "info@scrubshopper.com", "state": "AR", "country": "US", "cart_address_id":
+        null, "validation": {"suggested": [], "additional_text": null, "is_error":
+        false}, "street2": ""}, "shipment_id": "1-1001-2"}], "notes_from_customer":
         "", "shippability": "shippable", "shipping_amount": 8.0, "shipping_type":
-        "Standard Shipping", "comments": [{"date": "2016-04-07T14:34:17.766983-05:00",
-        "text": "Updated address with data: validation={u''suggested'': [{u''city'':
-        u''FAYETTEVILLE'', u''zip'': u''72701'', u''street1'': u''1 W CENTER ST'',
-        u''street2'': '''', u''is_commercial'': False, u''state'': u''AR'', u''country_code'':
-        u''US''}], u''additional_text'': u''Default Match - More information, such
-        as an apartment or suite number, may give a more specific address.'', u''is_error'':
-        False}", "user": "blake@geminimvp.com"}], "company_id": 244613, "_link": "/order/1-1001/",
-        "credit_card_issuer": "Visa", "status": "new", "updated": "2016-04-07T14:34:11.083449-05:00",
-        "billing_address": {"city": "Fayetteville", "fax": "", "_linkaddresscreatedtaskstatus":
-        "/new_task/status/address_created/2271338118/", "name": "Jim Kane", "zip":
-        "72701", "phone": "", "street1": "1 W Center St", "company": "", "_link":
-        "/address/2271338118/", "id": 2271338118, "reference_number": "", "email":
-        "fastjames@gmail.com", "state": "AR", "country": "US", "cart_address_id":
+        "Standard Shipping", "comments": [{"date": "2016-04-15T09:20:30.070150-05:00",
+        "text": "Shipment 1-1001-1 deleted because order was cancelled", "user": "blake@geminimvp.com"},
+        {"date": "2016-04-15T09:20:30.058386-05:00", "text": "Shipment 1-1001-2 deleted
+        because order was cancelled", "user": "blake@geminimvp.com"}, {"date": "2016-04-15T09:20:30.035061-05:00",
+        "text": "Order cancelled", "user": "blake@geminimvp.com"}, {"date": "2016-04-14T10:44:41.413290-05:00",
+        "text": "Shipment 1-1001-2 deleted", "user": "blake@geminimvp.com"}, {"date":
+        "2016-04-14T10:44:39.112973-05:00", "text": "Shipment 1-1001-2 was modified:\n-
+        specified_weight changed to 1.075\n- assigned_to_id changed to 39432", "user":
+        "blake@geminimvp.com"}, {"date": "2016-04-14T10:44:25.205817-05:00", "text":
+        "Created shipment 1-1001-2", "user": "blake@geminimvp.com"}, {"date": "2016-04-14T10:40:13.913887-05:00",
+        "text": "Shipment 1-1001-1 deleted", "user": "blake@geminimvp.com"}, {"date":
+        "2016-04-14T10:39:49.971875-05:00", "text": "Dropshipment request sent to
+        Landau Uniforms, Inc. <blake@scrubshopper.com>", "user": "blake@geminimvp.com"},
+        {"date": "2016-04-14T10:37:48.584096-05:00", "text": "Created shipment 1-1001-1",
+        "user": "blake@geminimvp.com"}, {"date": "2016-04-14T10:37:47.957307-05:00",
+        "text": "Shipment 1-1001-1 was modified:\n- specified_weight changed to 1.075\n-
+        assigned_to_id changed to 39432", "user": "blake@geminimvp.com"}, {"date":
+        "2016-04-07T14:34:17.766983-05:00", "text": "Updated address with data: validation={u''suggested'':
+        [{u''city'': u''FAYETTEVILLE'', u''zip'': u''72701'', u''street1'': u''1 W
+        CENTER ST'', u''street2'': '''', u''is_commercial'': False, u''state'': u''AR'',
+        u''country_code'': u''US''}], u''additional_text'': u''Default Match - More
+        information, such as an apartment or suite number, may give a more specific
+        address.'', u''is_error'': False}", "user": "blake@geminimvp.com"}], "company_id":
+        244613, "_link": "/order/1-1001/", "credit_card_issuer": "Visa", "status":
+        "cancelled", "updated": "2016-04-15T09:20:30.026514-05:00", "billing_address":
+        {"city": "Fayetteville", "fax": "", "_linkaddresscreatedtaskstatus": "/new_task/status/address_created/2271338118/",
+        "name": "Jim Kane", "zip": "72701", "phone": "", "street1": "1 W Center St",
+        "company": "", "_link": "/address/2271338118/", "id": 2271338118, "reference_number":
+        "", "email": "fastjames@gmail.com", "state": "AR", "country": "US", "cart_address_id":
         "", "validation": {"suggested": [], "additional_text": null, "is_error": false},
         "street2": ""}, "tags": [], "order_id": "1-1001", "product_amount": 35.46,
         "grand_total": 47.69, "cart": 63827, "order_date": "2016-04-07T14:08:10-05:00",
         "cart_order_id": "2707083203", "cart_shipment_id": "", "discount_amount":
         0.0, "tax_amount": 4.23, "created": "2016-04-07T14:34:11.020780-05:00", "lines":
         [{"product": {"sku": "L-7489-M-BCP", "category": "Scrubs", "bigc_variant_migrated":
-        false, "archive_date": null, "updated": "2016-04-05T09:42:32.665044-05:00",
+        false, "archive_date": null, "updated": "2016-04-15T11:50:27.457858-05:00",
         "name": "Men''s 5 Pocket Scrub Top - Ceil Blue Medium", "weight": 0.5379279193,
         "customer_text": null, "price": 17.73, "created": "2016-04-05T09:42:32.640988-05:00",
         "company_id": 244613, "_link": "/product/L-7489-M-BCP/", "total_on_hand":
@@ -65,9 +168,9 @@ http_interactions:
         false}, "item_price": 17.73, "tax_lines": [{"amount": 2.3, "rate": 0.065,
         "name": "AR State Tax"}, {"amount": 0.44, "rate": 0.0125, "name": "Washington
         County Tax"}, {"amount": 0.71, "rate": 0.02, "name": "Fayetteville Municipal
-        Tax"}], "shippability": {"num_ordered": 2, "supplier_id": null, "shippability":
-        "shippable", "is_dropship": false, "num_shippable": 2, "track_inventory":
-        true, "on_hand": 100, "num_shipped": 0}, "total_price": 35.46, "selected_option":
+        Tax"}], "shippability": {"num_ordered": 2, "supplier_id": 26906, "shippability":
+        "shippable", "is_dropship": true, "num_shippable": 2, "track_inventory": true,
+        "on_hand": 0, "num_shipped": 0}, "total_price": 35.46, "selected_option":
         "", "cart_orderitem_id": "4819923971", "manually_edited": false, "order_line_id":
         16924489, "option_price": 0.0, "_link": "/order/1-1001/line/16924489/", "product_name":
         "Men''s 5 Pocket Scrub Top - Ceil Blue Medium", "quantity": 2}], "cart_name":
@@ -82,5 +185,5 @@ http_interactions:
         such as an apartment or suite number, may give a more specific address.",
         "is_error": false}, "street2": ""}}], "offset": 0}'
     http_version: 
-  recorded_at: Thu, 07 Apr 2016 20:55:08 GMT
+  recorded_at: Sun, 17 Apr 2016 19:17:05 GMT
 recorded_with: VCR 3.0.1
