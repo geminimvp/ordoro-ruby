@@ -58,7 +58,7 @@ module Ordoro
 
       def fetch(id)
         verify_id_presence!(id)
-        full_path = record_path + id.to_s + '/'
+        full_path = get_request_path(id)
         response = @last_response = request(:get, full_path)
         if response.code == 404
           record_not_found!(id)
@@ -67,6 +67,10 @@ module Ordoro
         parsed_body = JSON.parse(response.body)
         record_json = parsed_body
         instantiate_and_register_record(record_json)
+      end
+
+      def get_request_path(id)
+        "#{record_path}#{id.to_s}/"
       end
 
       def parse_records(json)
@@ -100,6 +104,10 @@ module Ordoro
         record = build(record_json)
         register_record(record)
         record
+      end
+
+      def update_request_path(record)
+        "#{record_path}#{record.id.to_s}/"
       end
 
       private
@@ -142,10 +150,6 @@ module Ordoro
         }
         response = request(:put, request_path, request_params)
         handle_response(record, response)
-      end
-
-      def update_request_path(record)
-        "#{record_path}#{record.id.to_s}/"
       end
 
       def handle_response(record, response)

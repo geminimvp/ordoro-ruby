@@ -22,7 +22,7 @@ module Ordoro
       attribute :weight, Float
 
       def initialize(attributes={})
-        self.sku = attributes.delete('id_token')
+        self.sku = attributes['id_token']
         super(attributes)
       end
 

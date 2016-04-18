@@ -38,6 +38,10 @@ module Ordoro
         super(attributes)
       end
 
+      def persisted?
+        order_id
+      end
+
     end
   end
 end

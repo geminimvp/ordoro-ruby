@@ -10,6 +10,7 @@ module Ordoro
     # debug_output $stderr
 
     record :Order
+    record :OrderTag
     record :Product
     record :Supplier
 

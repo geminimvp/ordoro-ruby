@@ -47,7 +47,7 @@ module SharedAdapterExamples
         }
       }
       let(:record_path_regex) {
-        /#{singular_name}\/\d+/
+        /#{adapter.get_request_path(dummy_id)}/
       }
 
       after(:each) do
@@ -162,12 +162,12 @@ module SharedAdapterExamples
 
       context "when record already exists" do
         let(:record) {
-          record_class.new('client' => client, 'id_token' => 123)
+          record_class.new('client' => client, 'id_token' => new_record_id)
         }
         let(:record_id) { record.id}
 
         let(:path_regex) {
-          /#{singular_name}\/#{record_id}/
+          /#{adapter.update_request_path(record)}/
         }
         let(:update_response) {
           {
