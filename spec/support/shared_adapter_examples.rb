@@ -32,7 +32,7 @@ module SharedAdapterExamples
       it "returns a count of records" do
         VCR.use_cassette(plural_name + '_count') do
           trash = adapter.count
-          expect(adapter.size).to be > 10
+          expect(adapter.size).to be >= 1
         end
 
       end

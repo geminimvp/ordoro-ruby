@@ -11,6 +11,7 @@ module Ordoro
 
     record :Order
     record :Product
+    record :Supplier
 
     def initialize(username, password, options={})
       @username = username
