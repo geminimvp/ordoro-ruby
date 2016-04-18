@@ -5,6 +5,8 @@ module Ordoro
     class Supplier < Base
 
       attribute :address, Ordoro::Record::Address
+      attribute :company, String
+      attribute :email, String
 
     end
   end
