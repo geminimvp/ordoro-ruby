@@ -12,6 +12,8 @@ module Ordoro
     record :Order
     record :OrderTag
     record :Product
+    record :ProductSupplier
+    record :ProductWarehouse
     record :Supplier
 
     def initialize(username, password, options={})
