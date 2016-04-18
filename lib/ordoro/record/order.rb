@@ -11,7 +11,7 @@ module Ordoro
       attribute :cart_order_id, String
       attribute :cart_shipment_id, String
       attribute :comments, Array[Ordoro::Record::Comment]
-      attribute :company_id, Integer
+      attribute :company_id, Integer, readonly: true
       attribute :credit_card_issuer, String
       attribute :discount_amount, BigDecimal
       attribute :grand_total, BigDecimal
