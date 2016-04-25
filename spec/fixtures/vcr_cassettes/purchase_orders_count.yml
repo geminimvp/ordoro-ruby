@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<USERNAME>:<PASSWORD>@api.ordoro.com/purchase_order/?limit=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache,max-age=0,must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 25 Apr 2016 15:56:45 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - gunicorn/19.3.0
+      X-Ordoro-Api-Server:
+      - i-06c41591447657213 1.42.0
+      X-Ordoro-Handled-By:
+      - ip-172-31-7-68
+      X-Ordoro-Request-Id:
+      - 9c0bc66e-8c03-4d01-9018-7982ab1442ed
+      Content-Length:
+      - '3956'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"count": 3, "purchase_order": [{"status": "sent", "updated": "2016-04-25T10:18:27.789358-05:00",
+        "shipping_method": null, "created": "2016-04-25T10:14:58.703407-05:00", "items":
+        [{"available_on_hand": 98, "product": {"sku": "L-3155-18-WWY", "category":
+        "Scrubs", "bigc_variant_migrated": false, "archive_date": null, "updated":
+        "2016-04-21T14:54:26.362061-05:00", "name": "Women''s Lab Coat - White 18",
+        "weight": 1.119948291, "customer_text": null, "price": 23.64, "created": "2016-04-05T17:56:52.162322-05:00",
+        "company_id": 244613, "_link": "/product/L-3155-18-WWY/", "total_on_hand":
+        99, "warehouse": {"location_in_warehouse": ""}, "supplier": {"sku": "L-3155-18-WWY",
+        "price": 12.09, "unit_price": 12.09}, "cost": 0.0, "taxable": "", "type":
+        null, "id": 35052052, "is_kit_parent": false}, "_link": "/purchase_order/20160425-1014587/line/238728/",
+        "to_be_shipped": 1, "id": 238728, "quantity_received": 0, "quantity": 1},
+        {"available_on_hand": 98, "product": {"sku": "L-3155-42-WWY", "category":
+        "Scrubs", "bigc_variant_migrated": false, "archive_date": null, "updated":
+        "2016-04-15T11:53:09.024850-05:00", "name": "Women''s Lab Coat - White 42",
+        "weight": 1.2191563089, "customer_text": null, "price": 23.64, "created":
+        "2016-04-05T17:56:58.430407-05:00", "company_id": 244613, "_link": "/product/L-3155-42-WWY/",
+        "total_on_hand": 99, "warehouse": {"location_in_warehouse": ""}, "supplier":
+        {"sku": "L-3155-42-WWY", "price": 12.09, "unit_price": 12.09}, "cost": 0.0,
+        "taxable": "", "type": null, "id": 35052055, "is_kit_parent": false}, "_link":
+        "/purchase_order/20160425-1014587/line/238727/", "to_be_shipped": 1, "id":
+        238727, "quantity_received": 0, "quantity": 1}], "po_id": "20160425-1014587",
+        "company_id": 244613, "_link": "/purchase_order/20160425-1014587/", "warehouse":
+        {"_link": "/warehouse/39366/", "id": 39366, "cart": null, "is_configured_for_shipping":
+        true, "address": {"city": "Fayetteville", "fax": null, "_linkaddresscreatedtaskstatus":
+        "/new_task/status/address_created/2260993380/", "name": "Acumen 3PL Warehouse",
+        "zip": "72704", "phone": "479-455-2022", "street1": "2041 N Shiloh Dr.", "company":
+        null, "id": 2260993380, "reference_number": null, "email": "info@acumenholdings.com",
+        "state": "AR", "country": "US", "cart_address_id": null, "validation": {"suggested":
+        [], "additional_text": null, "is_error": false}, "street2": ""}, "is_default_location":
+        true}, "goods_receipts": [], "comments": [{"date": "2016-04-25T10:18:42.852406-05:00",
+        "text": "Landau web order W435722", "user": "jim@geminimvp.com"}, {"date":
+        "2016-04-25T10:18:27.803083-05:00", "text": "Purchase Order modified:\n- sent
+        changed to ''2016-04-25T15:18:01.129000+00:00''\n- sent value passed, setting
+        status to sent", "user": "jim@geminimvp.com"}, {"date": "2016-04-25T10:18:05.656075-05:00",
+        "text": "Purchase Order modified:\n- po_id changed to u''20160425-1014587''",
+        "user": "jim@geminimvp.com"}, {"date": "2016-04-25T10:15:13.297670-05:00",
+        "text": "Added 1 of u\"Women''s Lab Coat - White 18\" (SKU: u''L-3155-18-WWY'')",
+        "user": "jim@geminimvp.com"}, {"date": "2016-04-25T10:14:58.730400-05:00",
+        "text": "Added 1 of u\"Women''s Lab Coat - White 42\" (SKU: u''L-3155-42-WWY'')",
+        "user": "jim@geminimvp.com"}], "supplier": {"updated": "2016-04-06T11:38:23.918331-05:00",
+        "created": "2016-04-06T11:38:23.918001-05:00", "company_id": 244613, "_link":
+        "/supplier/26906/", "id": 26906, "address": {"city": "", "fax": "", "_linkaddresscreatedtaskstatus":
+        "/new_task/status/address_created/2266118514/", "name": null, "zip": "", "phone":
+        "", "street1": "", "company": "Landau Uniforms, Inc.", "id": 2266118514, "reference_number":
+        "Landau, MDF, Scrubzone, Smitten, Urbane", "email": "jim@scrubshopper.com",
+        "state": "", "country": "", "cart_address_id": null, "validation": {"suggested":
+        [], "additional_text": null, "is_error": false}, "street2": ""}, "vendor_config":
+        {}}, "sent": "2016-04-25T10:18:01.129000-05:00", "instructions": null}], "limit":
+        1, "offset": 0}'
+    http_version: 
+  recorded_at: Mon, 25 Apr 2016 15:56:30 GMT
+recorded_with: VCR 3.0.1
