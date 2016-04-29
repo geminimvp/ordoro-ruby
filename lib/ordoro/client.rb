@@ -14,6 +14,8 @@ module Ordoro
     record :Product
     record :ProductSupplier
     record :ProductWarehouse
+    record :Shipment
+    record :ShipmentTracking
     record :Supplier
     record :PurchaseOrder
 
@@ -34,15 +36,13 @@ module Ordoro
     private
 
     def default_request_options
-      {
-        basic_auth: auth_params
-      }
+      { basic_auth: auth_params }
     end
 
     def auth_params
       {
         username: @username,
-        password: @password
+        password: @password,
       }
     end
 

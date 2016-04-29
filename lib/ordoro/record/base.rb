@@ -2,6 +2,7 @@ require 'ordoro/helpers/serialization_helper'
 require 'ordoro/helpers/validation_helper'
 module Ordoro
   module Record
+    # Base record class for all Ordoro model wrappers
     class Base
       include Virtus.model
       include Ordoro::Helpers::SerializationHelper
