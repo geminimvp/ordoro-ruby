@@ -48,7 +48,7 @@ module Ordoro
       end
 
       def count(params={})
-        self.where(params.merge(limit: 1))
+        where(params.merge(limit: 1))
         @pagination[:total_records]
       end
 
@@ -133,13 +133,17 @@ module Ordoro
       end
 
       def create_record(record)
-        request_path = record_path
+        request_path = create_request_path(record)
         request_params = {
           body: record.as_json,
           raise_errors: false
         }
         response = request(:post, request_path, request_params)
         handle_response(record, response)
+      end
+
+      def create_request_path(record)
+        record_path
       end
 
       def update_record(record)

@@ -43,6 +43,5 @@ module Ordoro
       end
 
     end
-
   end
 end

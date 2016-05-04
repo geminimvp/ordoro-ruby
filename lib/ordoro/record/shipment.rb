@@ -6,7 +6,7 @@ module Ordoro
     class Shipment < Base
 
       attribute :audit_shipment, String, readonly: true
-      attribute :comments, Array[String], readonly: true
+      attribute :comments, Array[Ordoro::Record::Comment], readonly: true
       attribute :notes_from_customer, String, readonly: true
       attribute :notify_cart_success, Boolean
       attribute :order_id, String, readonly: true
@@ -18,6 +18,10 @@ module Ordoro
       attribute :tags, Array[Ordoro::Record::Tag]
       attribute :tracking, Ordoro::Record::ShipmentTracking, readonly: true
       attribute :weight, BigDecimal
+
+      def add_comment(comment_text)
+        ShipmentComment.new(comment: comment_text).save_embedded(self)
+      end
 
     end
   end

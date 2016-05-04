@@ -2,6 +2,7 @@ require 'ordoro/record/base'
 
 module Ordoro
   module Record
+    # Class representing an Order record from Ordoro
     class Order < Base
 
       attribute :_link, String, readonly: true
@@ -40,6 +41,13 @@ module Ordoro
 
       def persisted?
         order_id
+      end
+
+      def create_shipment
+        shipment = Shipment.new(order_id: order_id, client: client)
+        shipment.save
+        # Reload to find the full shipment record
+        find(order_id).shipments.last
       end
 
     end

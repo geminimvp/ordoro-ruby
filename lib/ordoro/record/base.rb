@@ -4,6 +4,7 @@ module Ordoro
   module Record
     # Base record class for all Ordoro model wrappers
     class Base
+
       include Virtus.model
       include Ordoro::Helpers::SerializationHelper
       include Ordoro::Helpers::ValidationHelper
@@ -19,8 +20,12 @@ module Ordoro
         super(attributes)
       end
 
+      def self.demodulized_name
+        name.split('::').last
+      end
+
       def persisted?
-        !!id
+        !id.nil?
       end
 
       def save
@@ -28,21 +33,17 @@ module Ordoro
       end
 
       def find(id)
-        fetch(id)
+        @client.adapter_for(self.class.demodulized_name).fetch(id)
       end
 
       def find_many(ids)
-        ids.map {|id| find(id) }
+        ids.map { |id| find(id) }
       end
 
       private
 
       def json_root
         @model_name.to_s.underscore
-      end
-
-      def self.demodulized_name
-        self.name.split('::').last
       end
 
     end

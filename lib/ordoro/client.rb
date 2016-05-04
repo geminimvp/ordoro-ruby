@@ -2,7 +2,9 @@ require 'httparty'
 require 'ordoro/helpers/record_helper'
 
 module Ordoro
+  # Client adapter for accessing Ordoro API
   class Client
+
     extend Helpers::RecordHelper
     include HTTParty
     base_uri 'https://api.ordoro.com'
@@ -15,11 +17,12 @@ module Ordoro
     record :ProductSupplier
     record :ProductWarehouse
     record :Shipment
+    record :ShipmentComment
     record :ShipmentTracking
     record :Supplier
     record :PurchaseOrder
 
-    def initialize(username, password, options={})
+    def initialize(username, password)
       @username = username
       @password = password
     end
@@ -30,7 +33,7 @@ module Ordoro
     end
 
     def adapter_for(klass_name)
-      self.public_send(klass_name.to_sym)
+      public_send(klass_name.to_sym)
     end
 
     private
