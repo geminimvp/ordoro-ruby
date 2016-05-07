@@ -16,7 +16,7 @@ module Ordoro
       attribute :shipment_id, String
       attribute :status, String
       attribute :tags, Array[Ordoro::Record::Tag]
-      attribute :tracking, Ordoro::Record::ShipmentTracking, readonly: true
+      attribute :tracking, String, readonly: true
       attribute :weight, BigDecimal
 
       def add_comment(comment_text)
