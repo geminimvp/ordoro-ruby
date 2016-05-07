@@ -24,6 +24,7 @@ module Ordoro
       attribute :tracking, Ordoro::Record::NewTracking
 
       def save_embedded(parent)
+        self.shipment_id = parent.shipment_id
         parent.client.adapter_for(self.class.demodulized_name)
               .save_embedded(self, parent)
       end
@@ -32,6 +33,7 @@ module Ordoro
       def update_tracking(tracking_number, shipping_service)
         self.ship_date = Time.now
         self.tracking = new_tracking(tracking_number, shipping_service)
+        self.notify_cart = true
       end
 
       def new_tracking(tracking_number, shipping_service)
