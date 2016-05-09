@@ -13,6 +13,8 @@ module Ordoro
 
     record :Order
     record :OrderTag
+    record :OrderComment
+    record :OrderShipment
     record :Product
     record :ProductSupplier
     record :ProductWarehouse

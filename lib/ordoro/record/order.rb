@@ -44,10 +44,12 @@ module Ordoro
       end
 
       def create_shipment
-        shipment = Shipment.new(order_id: order_id, client: client)
-        shipment.save
+        shipment = OrderShipment.new(order_id: order_id, client: client)
+        shipment.save_embedded(self)
         # Reload to find the full shipment record
-        find(order_id).shipments.last
+        full_shipment = find(order_id).shipments.last
+        full_shipment.client = client
+        full_shipment
       end
 
     end
