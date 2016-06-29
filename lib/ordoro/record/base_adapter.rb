@@ -3,6 +3,8 @@ module Ordoro
     class BaseAdapter
       attr_reader :client, :last_response
 
+      DEFAULT_LIMIT = 10.freeze
+
       def initialize(client, model_name)
         @client       = client
         @model_name   = model_name
@@ -40,7 +42,18 @@ module Ordoro
         response = request(:get, full_path, query: params)
         parsed_response = JSON.parse(response.body)
         set_pagination(parsed_response)
-        parse_records(parsed_response)
+        parsed_records = parse_records(parsed_response)
+        # has_more_records = (parsed_records.count < @pagination[:total_records])
+        if params[:limit].nil?
+          offset = 0
+          while parsed_records.count < @pagination[:total_records] do
+            offset = offset + DEFAULT_LIMIT
+            page_query_params = params.merge(offset: offset)
+            next_response = request(:get, full_path, query: page_query_params)
+            parsed_records += parse_records(next_response)
+          end
+        end
+        parsed_records
       end
 
       def first(params={})
