@@ -18,6 +18,17 @@ module Ordoro
       attribute :tags, Array[Ordoro::Record::Tag], readonly: true
       attribute :tracking, String, readonly: true
       attribute :weight, BigDecimal, readonly: true
+      attribute :lines, Array[Ordoro::Record::ShipmentLineItem], readonly: true
+      attribute :assigned_to_id, Integer
+
+      def initialize(attributes={})
+        self.shipment_id = attributes.delete('id_token')
+        super(attributes)
+      end
+
+      def persisted?
+        shipment_id
+      end
 
       def add_comment(comment_text)
         ShipmentComment.new(comment: comment_text).save_embedded(self)

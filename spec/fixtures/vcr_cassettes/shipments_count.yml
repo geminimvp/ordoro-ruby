@@ -1,0 +1,126 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<USERNAME>:<PASSWORD>@api.ordoro.com/shipment/?limit=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic Ymxha2VAZ2VtaW5pbXZwLmNvbTpNYWtlU2NydWJzR3JlYXRBZ2Fpbg==
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache,max-age=0,must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 18 Jul 2016 21:29:24 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - gunicorn/19.3.0
+      X-Ordoro-Api-Server:
+      - i-05e2318b4fda943dd 1.49.0
+      X-Ordoro-Handled-By:
+      - ip-172-31-44-68
+      X-Ordoro-Request-Id:
+      - d58e52e3-5f9c-4450-ac7a-c3eb77d6afa6
+      Content-Length:
+      - '6634'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"count": 3151, "limit": 1, "shipment": [{"audit_shipment": {"tracking":
+        [], "sent": []}, "notes_from_customer": "Embroidery: \nRight Chest: New OFSC
+        Logo", "weight": 5.3087312688, "return_tracking": {}, "_linkshipmentcreatedtaskstatus":
+        "/new_task/status/shipment_created/1-SCRUB6133-1/", "assigned_to_id": 39366,
+        "comments": [{"date": "2016-07-18T16:29:12.155224-05:00", "text": "Shipment
+        1-SCRUB6133-1 deleted", "user": "johnmark@hayseedventures.com"}, {"date":
+        "2016-07-18T12:32:15.104047-05:00", "text": "Created shipment 1-SCRUB6133-1",
+        "user": "blake@geminimvp.com"}, {"date": "2016-07-18T11:37:27.574846-05:00",
+        "text": "Order modified:\n- Removed tag \"waiting_for_3pl_stock\" (id: 8192)\n-
+        Added tag \"ship_via_3pl\" (id: 8139)", "user": "blake@geminimvp.com"}, {"date":
+        "2016-07-15T10:14:00.306014-05:00", "text": "Order modified:\n- Added tag
+        \"items_ordered\" (id: 8371)", "user": "johnmark@hayseedventures.com"}, {"date":
+        "2016-07-15T10:00:04.502081-05:00", "text": "20160715-09552997", "user": "johnmark@hayseedventures.com"},
+        {"date": "2016-07-15T06:40:38.294606-05:00", "text": "Order modified:\n- Added
+        tag \"waiting_for_3pl_stock\" (id: 8192)\n- Added tag \"embroidery\" (id:
+        8153)", "user": "blake@geminimvp.com"}, {"date": "2016-07-14T21:20:28.396253-05:00",
+        "text": "Updated address with data: validation={u''suggested'': [{u''city'':
+        u''SPRINGDALE'', u''zip'': u''72762'', u''street1'': u''2926 W HUNTSVILLE
+        AVE'', u''street2'': '''', u''is_commercial'': True, u''state'': u''AR'',
+        u''country_code'': u''US''}], u''additional_text'': None, u''is_error'': False}",
+        "user": "blake@geminimvp.com"}], "_linkreturnlabelrate": "/shipment/1-SCRUB6133-1/return_label/rate/",
+        "ship_to": {"city": "Springdale", "fax": "", "_linkaddresscreatedtaskstatus":
+        "/new_task/status/address_created/2745755041/", "name": "Oral &  Facial Surgery
+        Center (Maxsurge)", "zip": "72703", "phone": "479.717.1196", "street1": "2926
+        West Huntsville Ave", "company": "", "id": 2745755041, "reference_number":
+        "", "email": "sbates@maxsurge.com", "state": "AR", "country": "US", "cart_address_id":
+        "", "validation": {"suggested": [{"city": "SPRINGDALE", "zip": "72762", "street1":
+        "2926 W HUNTSVILLE AVE", "street2": "", "is_commercial": true, "state": "AR",
+        "country_code": "US"}], "additional_text": null, "is_error": false}, "street2":
+        ""}, "notify_cart_success": null, "_linkgeneratelabel": "/shipment/1-SCRUB6133-1/label/generate/",
+        "requested_shipping_method": "FREE Standard Shipping for orders > $100", "company_id":
+        244613, "_link": "/shipment/1-SCRUB6133-1/", "cart_vendor": "shopify", "audit_label":
+        [], "notify_cart": false, "ship_from": {"city": "Fayetteville", "fax": null,
+        "_linkaddresscreatedtaskstatus": "/new_task/status/address_created/2260993380/",
+        "name": "Acumen 3PL Warehouse", "zip": "72704", "phone": "479-455-2022", "street1":
+        "2041 N Shiloh Dr.", "company": null, "id": 2260993380, "reference_number":
+        null, "email": "info@acumenholdings.com", "state": "AR", "country": "US",
+        "cart_address_id": null, "validation": {"suggested": [], "additional_text":
+        null, "is_error": false}, "street2": ""}, "status": "deleted", "updated":
+        "2016-07-18T16:29:12.133248-05:00", "tags": [], "order_id": "1-SCRUB6133",
+        "_linklabelrate": "/shipment/1-SCRUB6133-1/label/rate/", "cart": 63827, "ship_date":
+        null, "preset": {}, "exported": null, "order_date": "2016-07-14T15:10:36-05:00",
+        "_linkgeneratereturnlabel": "/shipment/1-SCRUB6133-1/return_label/generate/",
+        "cart_order_id": "3307990851", "tracking": {}, "notify_cart_history": [],
+        "created": "2016-07-18T12:32:15.007156-05:00", "rules": [], "lines": [{"comment":
+        "", "product": {"sku": "C-4725-L-PWTW", "category": "Scrubs", "bigc_variant_migrated":
+        false, "archive_date": null, "updated": "2016-07-18T10:56:27.069644-05:00",
+        "name": "Unisex Workwear Core Stretch V-Neck Top - Pewter Large", "weight":
+        0.5291094288, "customer_text": null, "price": 18.98, "created": "2016-04-05T11:31:28.105848-05:00",
+        "company_id": 244613, "_link": "/product/C-4725-L-PWTW/", "total_on_hand":
+        104, "cost": 0.0, "taxable": "", "type": null, "id": 35003424, "is_kit_parent":
+        false}, "cart_orderitem_id": "6044176067", "item_price": 18.98, "cogs": 0.0,
+        "product_name": "Unisex Workwear Core Stretch V-Neck Top - Pewter Large",
+        "order_line_id": 18723783, "selected_option": "", "_link": "/shipment/1-SCRUB6133-1/line/12768281/",
+        "shipment_id": 7193992, "total_price": 75.92, "ordered_quantity": 4, "id":
+        12768281, "quantity": 4}, {"comment": "", "product": {"sku": "C-4000-L-PWTW",
+        "category": "Scrubs", "bigc_variant_migrated": false, "archive_date": null,
+        "updated": "2016-07-18T10:56:32.835433-05:00", "name": "Men''s Workwear Cargo
+        Pant - Pewter Large", "weight": 0.7980733884, "customer_text": null, "price":
+        18.98, "created": "2016-04-05T10:21:25.300180-05:00", "company_id": 244613,
+        "_link": "/product/C-4000-L-PWTW/", "total_on_hand": 104, "cost": 0.0, "taxable":
+        "", "type": null, "id": 34994962, "is_kit_parent": false}, "cart_orderitem_id":
+        "6044176131", "item_price": 18.98, "cogs": 0.0, "product_name": "Men''s Workwear
+        Cargo Pant - Pewter Large", "order_line_id": 18723784, "selected_option":
+        "", "_link": "/shipment/1-SCRUB6133-1/line/12768282/", "shipment_id": 7193992,
+        "total_price": 75.92, "ordered_quantity": 4, "id": 12768282, "quantity": 4},
+        {"comment": "", "product": {"sku": "19134190083", "category": "", "bigc_variant_migrated":
+        false, "archive_date": null, "updated": "2016-07-15T15:36:19.408351-05:00",
+        "name": "Custom Embroidery Logo", "weight": 0.0, "customer_text": null, "price":
+        8.0, "created": "2016-04-18T17:26:03.792502-05:00", "company_id": 244613,
+        "_link": "/product/19134190083/", "total_on_hand": 9635, "cost": 0.0, "taxable":
+        "", "type": null, "id": 35322385, "is_kit_parent": false}, "cart_orderitem_id":
+        "6044176195", "item_price": 8.0, "cogs": 0.0, "product_name": "Custom Embroidery
+        Logo", "order_line_id": 18723785, "selected_option": "", "_link": "/shipment/1-SCRUB6133-1/line/12768283/",
+        "shipment_id": 7193992, "total_price": 32.0, "ordered_quantity": 4, "id":
+        12768283, "quantity": 4}], "shipped": true, "cart_notified_on": null, "added_by_id":
+        35393, "assigned_to": {"city": "Fayetteville", "fax": null, "_linkaddresscreatedtaskstatus":
+        "/new_task/status/address_created/2260993380/", "name": "Acumen 3PL Warehouse",
+        "zip": "72704", "phone": "479-455-2022", "street1": "2041 N Shiloh Dr.", "company":
+        null, "id": 2260993380, "reference_number": null, "email": "info@acumenholdings.com",
+        "state": "AR", "country": "US", "cart_address_id": null, "validation": {"suggested":
+        [], "additional_text": null, "is_error": false}, "street2": ""}, "shipment_id":
+        "1-SCRUB6133-1"}], "offset": 0}'
+    http_version: 
+  recorded_at: Mon, 18 Jul 2016 21:29:26 GMT
+recorded_with: VCR 3.0.3

@@ -173,7 +173,8 @@ module Ordoro
         parsed_body = JSON.parse(response.body)
         case response.code
         when 200..299
-          if response_json = extract_record(parsed_body)
+          response_json = extract_record(parsed_body)
+          if response_json
             record.attributes = response_json
             register_record(record)
           end

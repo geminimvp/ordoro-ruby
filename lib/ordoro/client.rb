@@ -20,6 +20,7 @@ module Ordoro
     record :ProductWarehouse
     record :Shipment
     record :ShipmentComment
+    record :ShipmentLineItem
     record :ShipmentTracking
     record :Supplier
     record :PurchaseOrder

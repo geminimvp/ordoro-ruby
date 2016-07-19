@@ -32,6 +32,12 @@ module Ordoro
         @client.adapter_for(self.class.demodulized_name).save(self)
       end
 
+      def save_embedded(parent)
+        parent
+          .client.adapter_for(self.class.demodulized_name)
+          .save_embedded(self, parent)
+      end
+
       def find(id)
         @client.adapter_for(self.class.demodulized_name).fetch(id)
       end
