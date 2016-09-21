@@ -42,6 +42,10 @@ module Ordoro
         end
       end
 
+      def buy_from(supplier_id, quantity)
+        @client.adapter_for(self.class.demodulized_name).buy_from_supplier(self, supplier_id, quantity)
+      end
+
     end
   end
 end
