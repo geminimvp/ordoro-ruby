@@ -9,16 +9,16 @@ module Ordoro
       def serializable_hash
         attribute_hash = {}
         attribute_set.each do |attribute|
-          next unless writeable?(attribute)
+          next unless writable?(attribute)
           serialize_attribute(attribute_hash, attribute)
         end
         attribute_hash
       end
 
-      def writeable?(attribute)
+      def writable?(attribute)
         return if attribute.options[:readonly]
-        return true unless attribute.options[:writeable_on]
-        case attribute.options[:writeable_on]
+        return true unless attribute.options[:writable_on]
+        case attribute.options[:writable_on]
         when :update
           persisted?
         when :create

@@ -19,7 +19,7 @@ module Ordoro
       attribute :tracking, String, readonly: true
       attribute :weight, BigDecimal, readonly: true
       attribute :lines, Array[Ordoro::Record::ShipmentLineItem], readonly: true
-      attribute :assigned_to_id, Integer
+      attribute :assigned_to_id, Integer, writable_on: :update
 
       def initialize(attributes={})
         self.shipment_id = attributes.delete('id_token')
