@@ -22,6 +22,11 @@ module Ordoro
       def persisted?
         po_id
       end
+
+      def send_to_supplier
+        @client.adapter_for(self.class.demodulized_name).send_to_supplier(self)
+      end
+
     end
   end
 end
