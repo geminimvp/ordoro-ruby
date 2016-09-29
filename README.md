@@ -9,6 +9,8 @@
 ## Description
 
 This library provides a ruby interface to the Ordoro API, as described in the [Ordoro API docs](http://docs.ordoro.apiary.io/).
+We use it at [Scrub Shopper](https://www.scrubshopper.com/) in conjunction with Shopify to handle stocking, dropship, and other
+backend fulfillment tasks.
 
 ## Features
 
