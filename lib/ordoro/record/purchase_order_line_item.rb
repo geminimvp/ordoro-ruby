@@ -5,6 +5,7 @@ module Ordoro
     class PurchaseOrderLineItem < Base
 
       attribute :available_on_hand, Integer
+      attribute :item_price, BigDecimal, readonly: true
       attribute :product, Ordoro::Record::Product
       attribute :to_be_shipped, Integer
       attribute :quantity_received, Integer
