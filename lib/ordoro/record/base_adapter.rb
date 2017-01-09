@@ -83,7 +83,7 @@ module Ordoro
       end
 
       def get_request_path(id)
-        "#{record_path}#{id.to_s}/"
+        "#{record_path}#{CGI.escape(id.to_s)}/"
       end
 
       def parse_records(json)
