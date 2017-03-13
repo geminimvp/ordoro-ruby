@@ -45,10 +45,11 @@ module Ordoro
 
       def create_shipment(warehouse_id=nil)
         shipment = OrderShipment.new(order_id: order_id, client: client)
-        shipment.save_embedded(self)
-        updated_order = client.Order.find(order_id)
-        new_shipment = updated_order.shipments.last
-        full_shipment = client.Shipment.find(new_shipment.shipment_id)
+        response = shipment.save_embedded(self)
+        shipment_id = response["shipments"].last["shipment_id"]
+        # updated_order = client.Order.find(order_id)
+        # new_shipment = updated_order.shipments.last
+        full_shipment = client.Shipment.find(shipment_id)
         full_shipment.client = client
         if warehouse_id
           full_shipment.assigned_to_id = warehouse_id

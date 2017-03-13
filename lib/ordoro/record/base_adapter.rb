@@ -178,7 +178,7 @@ module Ordoro
             record.attributes = response_json
             register_record(record)
           end
-          true
+          response_json
         when 422
           record.errors.from_response(parsed_body['errors'])
           false
